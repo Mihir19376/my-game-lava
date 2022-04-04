@@ -202,7 +202,7 @@ public class HeroKnight : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("obstacle"))
         {
-            Debug.Log("Hit by Obstacle");
+            Destroy(gameObject);
         }
 
     }
