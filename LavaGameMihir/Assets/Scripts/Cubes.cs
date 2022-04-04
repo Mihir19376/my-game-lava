@@ -19,4 +19,3 @@ public class Cubes : MonoBehaviour
     }
 
 }
-    

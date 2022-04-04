@@ -27,12 +27,12 @@ public class playerScript : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.AddForce(Vector2.right * moveRightOrLeftForce);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             rb.AddForce(Vector2.left * moveRightOrLeftForce);
         }
@@ -40,7 +40,7 @@ public class playerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Setting"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             //if (isOnGround == false)
             //{
@@ -49,5 +49,11 @@ public class playerScript : MonoBehaviour
 
             isOnGround = true;
         }
+        else if (collision.gameObject.CompareTag("obstacle"))
+        {
+
+            Destroy(gameObject);
+        }
     }
+
 }
