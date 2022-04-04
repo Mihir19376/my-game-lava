@@ -36,6 +36,11 @@ public class playerScript : MonoBehaviour
         {
             rb.AddForce(Vector2.left * moveRightOrLeftForce);
         }
+
+        else if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,7 +57,7 @@ public class playerScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("obstacle"))
         {
 
-            Destroy(gameObject);
+            isOnGround = true;
         }
     }
 
