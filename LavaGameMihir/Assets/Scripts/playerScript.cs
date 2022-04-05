@@ -7,7 +7,7 @@ public class playerScript : MonoBehaviour
     public float jumpForce;
     public float moveRightOrLeftForce;
     bool isOnGround = false;
-    public int speed = 4;
+    public int speed = 20;
 
     private int maxHealth = 1000;
     public int currentHealth;
@@ -19,6 +19,7 @@ public class playerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -33,6 +34,11 @@ public class playerScript : MonoBehaviour
             }
         }
 
+        else if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.AddForce(Vector2.right * moveRightOrLeftForce);
@@ -43,11 +49,9 @@ public class playerScript : MonoBehaviour
             rb.AddForce(Vector2.left * moveRightOrLeftForce);
         }
 
-        else if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -67,6 +71,7 @@ public class playerScript : MonoBehaviour
             isOnGround = true;
         }
     }
+
 
     void TakeDamage(int damage)
     {
