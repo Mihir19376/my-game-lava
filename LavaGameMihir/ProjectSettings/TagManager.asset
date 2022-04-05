@@ -7,6 +7,7 @@ TagManager:
   - obstacle
   - Setting
   - Ground
+  - thing
   layers:
   - Default
   - TransparentFX
