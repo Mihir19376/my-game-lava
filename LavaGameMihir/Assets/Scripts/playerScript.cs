@@ -7,6 +7,7 @@ public class playerScript : MonoBehaviour
     public float jumpForce;
     public float moveRightOrLeftForce;
     bool isOnGround = false;
+    public int speed = 4;
 
     private int maxHealth = 1000;
     public int currentHealth;
