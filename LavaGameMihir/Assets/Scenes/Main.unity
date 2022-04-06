@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_interval_time: 1
-  cube: {fileID: 7783854241741157435, guid: 1aa6b9129b2f44409b62d5b392c9998d, type: 3}
+  cube: {fileID: 2199566512448209066, guid: f1a73de0369e94a2c943d7c8774c92fb, type: 3}
   damage: 1
 --- !u!4 &1673385083
 Transform:
