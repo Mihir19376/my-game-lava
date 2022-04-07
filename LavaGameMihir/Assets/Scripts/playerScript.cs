@@ -7,10 +7,13 @@ public class playerScript : MonoBehaviour
     public float jumpForce;
     public float moveRightOrLeftForce;
     bool isOnGround = false;
-    public int speed = 20;
+    public float speed = 1000f;
 
     private int maxHealth = 1000;
     public int currentHealth;
+
+    private float inputHorizontal;
+    private float inputVertical;
 
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -24,8 +27,12 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isOnGround == true)
             {
@@ -34,21 +41,17 @@ public class playerScript : MonoBehaviour
             }
         }
 
-        else if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.AddForce(Vector2.right * moveRightOrLeftForce);
+            gameObject.transform.localScale = new Vector3(1, -1, 0);
         }
 
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             rb.AddForce(Vector2.left * moveRightOrLeftForce);
+            gameObject.transform.localScale = new Vector3(-1, 1, 0);
         }
-
 
     }
 
