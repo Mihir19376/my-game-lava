@@ -43,16 +43,40 @@ public class playerScript : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+
             rb.AddForce(Vector2.right * moveRightOrLeftForce);
-            gameObject.transform.localScale = new Vector3(1, -1, 0);
         }
 
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            
+
+
+
             rb.AddForce(Vector2.left * moveRightOrLeftForce);
-            gameObject.transform.localScale = new Vector3(-1, 1, 0);
         }
 
+        //else if (Input.GetKeyDown(KeyCode.RightShift))
+        //{
+        //    if (transform.localRotation.z > 0)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(1, -1, 0);
+        //    }
+        //    else if (transform.localRotation.z < 0)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(1, 1, 0);
+        //    }
+
+        //    else if (transform.localRotation.z > 0)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(1, 1, 0);
+        //    }
+
+        //    else if (transform.localRotation.z < 0)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(1, -1, 0);
+        //    }
+        //}
     }
 
 

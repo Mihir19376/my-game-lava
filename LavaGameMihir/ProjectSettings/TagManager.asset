@@ -8,6 +8,7 @@ TagManager:
   - Setting
   - Ground
   - thing
+  - Game End
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cubes : MonoBehaviour
 {
-    public float spawn_interval_time = 1;
+    private float spawn_interval_time = 1f;
     public GameObject cube;
     public int damage = 5;
 
