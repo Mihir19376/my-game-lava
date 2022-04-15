@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - thing
   - Game End
+  - gameOver
   layers:
   - Default
   - TransparentFX
